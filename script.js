@@ -53,8 +53,10 @@ const disableButtons = () => {
     count = 0;
     enableButtons();
   });
+
   //Win Logic
   const winChecker = () => {
+
     //Loop through all win patterns
     for (let i of winningPattern) {
       let [element1, element2, element3] = [
@@ -72,6 +74,7 @@ const disableButtons = () => {
       }
     }
   };
+
   //Display X/O on click
   btnRef.forEach((element) => {
     element.addEventListener("click", () => {
@@ -95,5 +98,6 @@ const disableButtons = () => {
       winChecker();
     });
   });
+  
   //Enable Buttons and disable popup on page load
   window.onload = enableButtons;
